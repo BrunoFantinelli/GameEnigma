@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Help me. I'm scared.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+    <script type="text/javascript">
+      function analisarResposta(){
+        var resposta = document.getElementById('campoResposta').value;
+        resposta = resposta.replace(" ", "");
+        resposta = resposta.toUpperCase();
+        var hash = CryptoJS.MD5(resposta).toString();
+        if(hash == "42b6e44208b3fb634cf8971e9a3be7a4"){
+          window.location.href = "lvl2.html";
+        }else{
+          alert("Reposta Errada.");
+        }
+
+      }
+    </script>
+  </head>
+  <body style="background-color:black;">
+  <div align="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="imagens/code_1.png" alt="">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="text" name="resposta" value="" id="campoResposta"> <br>
+    <button type="button" name="button" onclick="analisarResposta()" class="btn btn-outline-light"> Inserir </button>
+  </div>
+  </body>
+</html>
