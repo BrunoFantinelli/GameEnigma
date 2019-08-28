@@ -12,7 +12,6 @@
         resposta = resposta.replace(" ", "");
         resposta = resposta.toUpperCase();
         var hash = CryptoJS.MD5(resposta).toString();
-        alert(hash);
         if(hash == "47eadfa6304b70e563575c698ffd97c2"){
           window.location.href = "lvl3.html";
         }else{
