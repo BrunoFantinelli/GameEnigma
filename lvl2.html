@@ -9,7 +9,9 @@
     <script type="text/javascript">
       function analisarResposta(){
         var resposta = document.getElementById('campoResposta').value;
-        resposta = resposta.replace(" ", "");
+        while(resposta.indexOf(" ") != -1){
+          resposta = resposta.replace(" ", "");
+        }
         resposta = resposta.toUpperCase();
         var hash = CryptoJS.MD5(resposta).toString();
         if(hash == "c952e3ed56732c9a64d43ac06346f83b"){
